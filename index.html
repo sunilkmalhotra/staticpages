@@ -12,6 +12,10 @@
         message = 'Hello from GitHub';
         window.parent.postMessage(message, origin);
       }
+      window.addEventListener('message', function (event) {
+            console.log(event);
+            console.log('rendered Message from VF Page ' + event.data);
+          }
     </script>
   </body>
 </html>
