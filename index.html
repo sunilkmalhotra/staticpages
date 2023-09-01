@@ -12,12 +12,23 @@
       function sendData() {
         //var txt = document.getElementById("txtWord").value;
         //alert(txt);
-        
+
         var origin = 'https://absatt--tst3.sandbox.lightning.force.com/';
         message = 'Hello from GitHub';
         window.parent.postMessage(message, origin);
         console.log('message sent');
       }
+
+      window.addEventListener('message', function (event) {
+      console.log(event);
+      console.log('message from LWC ' + event.data);
+      if (event.origin !== this.origin) {
+          // Not the expected origin: Reject the message!
+          return;
+      }
+      // Handle the message
+      console.log(event.data);
+      }, false);
     </script>
   </body>
 </html>
