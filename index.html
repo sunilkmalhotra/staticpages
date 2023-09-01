@@ -5,12 +5,12 @@
 
   </head>
   <body>
-    <button onclick="sendData()">Click Here</button>
-    <!--input type="text" id="txtWord" name="search" placeholder="Search..." onclick="sendData()"-->
+    <button id="txtWord" onclick="sendData()">Click Here</button>
+    <!--input type="text"  name="search" placeholder="Search..." onclick="sendData()"-->
 
     <script>
       function sendData() {
-        //var txt = document.getElementById("txtWord").value;
+        var txt = document.getElementById("txtWord").value;
         alert(txt);
         var origin = 'https://absatt--tst3--c.sandbox.vf.force.com';
         message = 'Hello from GitHub';
